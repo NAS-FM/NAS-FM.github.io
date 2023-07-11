@@ -58,29 +58,83 @@
  
   <p style="text-align: justify;"><font color="061E61"> Developing digital sound synthesizers is crucial to the music industry as it provides a low-cost way to produce high-quality sounds with rich timbres. Existing traditional synthesizers often require substantial expertise to determine the overall framework of a synthesizer and the parameters of submodules. Since expert knowledge is hard to acquire,  it hinders the flexibility to quickly design  and tune digital synthesizers for diverse sounds. In this paper, we propose "NAS-FM", which adopts neural architecture search (NAS) to build a differentiable frequency modulation (FM) synthesizer. Tunable synthesizers with interpretable controls can be developed automatically from sounds without any prior expert knowledge and manual operating costs. In detail, we train a supernet with a specifically designed search space, including predicting the envelopes of carriers and modulators with different frequency ratios. An evolutionary search algorithm with adaptive oscillator size is then developed to find the optimal relationship between oscillators and the frequency ratio of FM. Extensive experiments on recordings of different instrument sounds show that our algorithm can build a synthesizer fully automatically, achieving better results than    handcrafted synthesizers.</font></p>
   <!-- <br></br> -->
-  <figure style="display: block; margin: 0 auto;width: 500px; height: 500px; border: 0px solid black;" >
+  <figure style="display: block; margin: 0 auto;width: 500px; height: 200px; border: 0px solid black;" >
   <p align="center"><img src="GeneratedSamples/demo_1.png" width="100%"  class="center"/></p>
  
 
-  <figcaption>
- The audio quality and inference speed comparisons of different TTS systems. We use  MOS (mean opinion score) and NFE (number of  function evaluations) to measure the audio quality and inference speed, respectively. The higher MOS and lower NFE indicate better audio quality and faster inference speed. The proposed CoMoSpeech achieves the best trade-off between audio quality and inference speed. In addition, our teacher models achieve the best audio quality among all the compared methods.
+  <!-- <figcaption> -->
   <!-- <b>Figure 1:</b>  An illustration of  CoMoSpeech. Our CoMoSpeech distills the multi-step sampling of the teacher model into one step utilizing the consistency constraint. -->
-  </figcaption>
-  </figure>
+  <!-- </figcaption>
+  </figure> -->
   <!-- <br></br> -->
+</div>
+
+<div class="container pt-5 mt-5 shadow p-5 mb-5 bg-white rounded">
+<h2 id="TTS" style="text-align:center;"><font color="000093">Comparison with Manually-Designed FM Synthesizers</font></h2>
+<p style="text-align: justify;"><font color="061E61"> The below audio samples show the comparison between   DDX7, and <b>NAS-FM</b>. </font></p> 
+<ul style="list-style-type:square">
+
+
+ 
+ 
+<br></br>
+<p><em><font color="061E62">Sample 1:Violin</font></em></p>
+<table align="center">
+<thead>
+<tr>
+ 
+<th style="font-weight: normal;text-align: center">DDX7 (Manually-Designed) </th>
+<th style="font-weight: normal;text-align: center">NAS-FM (Automatically)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+ 
+<td style=" text-align: center"><audio controls="controls" ><source src="GeneratedSamples/violin/synth_test.wav" autoplay/>Your browser does not support the audio element.</audio></td>
+<td style=" text-align: center"><audio controls="controls" ><source src="GeneratedSamples/violin/synth_testddx7.wav" autoplay/>Your browser does not support the audio element.</audio></td>
+</tr>
+</tbody>
+</table>
+
+<p><em><font color="061E62">Sample 2:Trumpet</font></em></p>
+  <table align="center">
+  <thead>
+  <tr>
+ 
+    <th style="font-weight: normal;text-align: center">DDX7 (Manually-Designed) </th>
+    <th style="font-weight: normal;text-align: center">NAS-FM (Automatically)</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr>
+ 
+    <td style=" text-align: center"><audio controls="controls" ><source src="GeneratedSamples/trumpet/synth_test.wav" autoplay/>Your browser does not support the audio element.</audio></td>
+    <td style=" text-align: center"><audio controls="controls" ><source src="GeneratedSamples/trumpet/synth_testddx7.wav" autoplay/>Your browser does not support the audio element.</audio></td>
+  </tr>
+  </tbody>
+  </table>
+
+  <p><em><font color="061E62">Sample 3:flute</font></em></p>
+  <table align="center">
+  <thead>
+  <tr>
+ 
+    <th style="font-weight: normal;text-align: center">DDX7 (Manually-Designed) </th>
+    <th style="font-weight: normal;text-align: center">NAS-FM (Automatically)</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr>
+ 
+    <td style=" text-align: center"><audio controls="controls" ><source src="GeneratedSamples/flute/synth_test.wav" autoplay/>Your browser does not support the audio element.</audio></td>
+    <td style=" text-align: center"><audio controls="controls" ><source src="GeneratedSamples/flute/synth_testddx7.wav" autoplay/>Your browser does not support the audio element.</audio></td>
+  </tr>
+  </tbody>
+  </table>
+
 </div>
  
 
-</p>
-
-			</section>
-		</article>
-	</main>
-
-
-	
-
-</div>
 
 <script>
 	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
